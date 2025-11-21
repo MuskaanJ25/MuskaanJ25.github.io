@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muskaan Jain</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Dynamic background */
+    #background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 20%, #1a1a2e, #000);
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .particle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+      animation: float 12s infinite linear;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0); opacity: 1; }
+      to { transform: translateY(-120vh); opacity: 0; }
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      margin: 0;
+    }
+
+    .section {
+      max-width: 850px;
+      margin: auto;
+      padding: 60px 20px;
+      background: rgba(0,0,0,0.35);
+      border-radius: 18px;
+      margin-bottom: 40px;
+      backdrop-filter: blur(5px);
+    }
+
+    h2 {
+      font-size: 2.2rem;
+    }
+
+    a { color: #7cc4ff; }
+
+    .icons {
+      margin-top: 25px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .icon {
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .icon:hover {
+      transform: scale(1.15);
+    }
+  </style>
+</head>
+<body>
+  <div id="background"></div>
+
+  <header>
+    <h1>Muskaan Jain</h1>
+    <div class="icons">
+      <a href="mailto:muskaanjain2512@gmail.com"><img class="icon" src="https://cdn-icons-png.flaticon.com/512/732/732200.png"></a>
+      <a href="YOUR_CV_LINK_HERE"><img class="icon" src="https://cdn-icons-png.flaticon.com/512/337/337946.png"></a>
+      <a href="https://github.com/MuskaanJ25"><img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733553.png"></a>
+    </div>
+  </header>
+
+  <div class="section" id="about">
+    <h2>About</h2>
+    <p>
+      I am a final year undergraduate student in Computer Science at IIT Bombay.
+      I have worked with 
+      <a href="https://agarpit.github.io/">Prof. Arpit Agarwal</a>, 
+      <a href="https://www.chem.iitb.ac.in/~sunoj/">Prof. Raghavan B. Sunoj</a>, and 
+      <a href="https://www.cse.iitb.ac.in/~ajitvr/">Prof. Ajit Rajwade</a>.
+    </p>
+  </div>
+
+  <div class="section" id="education">
+    <h2>Education</h2>
+    <p>
+      <strong>Bachelor's of Technology in Computer Science, 2026</strong><br>
+      <a href="https://www.iitb.ac.in/">IIT Bombay</a>
+    </p>
+  </div>
+
+  <div class="section" id="research">
+    <h2>Research</h2>
+    <p>
+      My research interests include recommendation systems, spectral algorithms, reinforcement learning, machine learning, and computational chemistry.
+    </p>
+  </div>
+
+  <script>
+    // generate moving particles
+    const bg = document.getElementById("background");
+    for (let i = 0; i < 50; i++) {
+      const p = document.createElement("div");
+      p.classList.add("particle");
+      p.style.left = Math.random() * 100 + "vw";
+      p.style.top = 100 + Math.random() * 20 + "vh";
+      p.style.animationDuration = 8 + Math.random() * 10 + "s";
+      bg.appendChild(p);
+    }
+  </script>
+</body>
+</html>
