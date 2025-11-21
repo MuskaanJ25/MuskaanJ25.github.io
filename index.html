@@ -120,9 +120,8 @@
       font-size: 3rem;
       font-weight: normal;
       margin: 0;
-      background: linear-gradient(90deg, var(--text-color), var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      /* Baby Pink Color */
+      color: #ff8fab; 
     }
 
     /* --- SECTIONS --- */
@@ -150,13 +149,13 @@
       margin-top: 20px;
       display: flex;
       align-items: center;
-      gap: 25px; /* Slightly more gap to breathe */
+      gap: 25px;
     }
     .icon-link {
         display: flex;
         align-items: center;
         transition: 0.3s;
-        text-decoration: none; /* Ensure no underline */
+        text-decoration: none;
     }
     .icon-img {
       width: 28px;
@@ -164,19 +163,18 @@
     }
     [data-theme="dark"] .icon-img { filter: invert(1); }
     
-    /* --- UPDATED PRETTY CV ICON --- */
+    /* CV Icon Style */
     .cv-text-icon {
-        font-family: 'Pacifico', cursive; /* Fancy font */
-        font-weight: 400; /* Light weight */
-        font-size: 1.3rem; /* Slightly larger to match icons */
+        font-family: 'Pacifico', cursive;
+        font-weight: 400;
+        font-size: 1.3rem;
         color: var(--text-color);
         line-height: 1;
-        transform: translateY(2px); /* Visual alignment fix */
+        transform: translateY(2px);
     }
 
     .icon-link:hover { transform: translateY(-3px); opacity: 0.7; }
     .icon-link:hover .cv-text-icon { color: var(--accent); }
-
 
     /* Education */
     .edu-item {
@@ -247,7 +245,7 @@
 
     <button class="theme-btn" id="themeToggle" aria-label="Toggle Dark Mode">
       <svg class="theme-icon" viewBox="0 0 24 24" id="iconSvg">
-        </svg>
+      </svg>
     </button>
   </nav>
 
@@ -274,6 +272,10 @@
             
             <a href="CV_Muskaan (1).pdf" target="_blank" class="icon-link" aria-label="CV">
                 <span class="cv-text-icon">CV</span>
+            </a>
+
+            <a href="YOUR_LINKEDIN_URL_HERE" target="_blank" class="icon-link">
+                <img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn">
             </a>
 
             <a href="https://github.com/MuskaanJ25" class="icon-link"><img class="icon-img" src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub"></a>
