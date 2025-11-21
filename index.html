@@ -105,18 +105,18 @@
     }
     .theme-btn:hover .theme-icon { transform: rotate(30deg); }
 
-    /* --- UPDATED HEADER --- */
+    /* --- HEADER --- */
     header {
-      text-align: left; /* Aligned left */
-      padding-top: 120px; /* Less padding */
+      text-align: left;
+      padding-top: 120px;
       padding-bottom: 30px;
       max-width: 800px;
       margin: 0 auto;
-      padding-left: 40px; /* Align with sections */
+      padding-left: 40px;
     }
 
     header h1 {
-      font-family: 'Pacifico', cursive; /* Fancy font */
+      font-family: 'Pacifico', cursive;
       font-size: 3rem;
       font-weight: normal;
       margin: 0;
@@ -150,29 +150,30 @@
       margin-top: 20px;
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 25px; /* Slightly more gap to breathe */
     }
     .icon-link {
         display: flex;
         align-items: center;
         transition: 0.3s;
+        text-decoration: none; /* Ensure no underline */
     }
     .icon-img {
       width: 28px;
       height: 28px;
     }
-    /* In dark mode, invert black image icons to white */
     [data-theme="dark"] .icon-img { filter: invert(1); }
     
-    /* New CV Text Icon Style */
+    /* --- UPDATED PRETTY CV ICON --- */
     .cv-text-icon {
-        font-weight: 900;
-        font-size: 1.4rem;
-        color: var(--text-color); /* Uses theme color */
+        font-family: 'Pacifico', cursive; /* Fancy font */
+        font-weight: 400; /* Light weight */
+        font-size: 1.6rem; /* Slightly larger to match icons */
+        color: var(--text-color);
         line-height: 1;
+        transform: translateY(2px); /* Visual alignment fix */
     }
 
-    /* Hover effects for both image and text icons */
     .icon-link:hover { transform: translateY(-3px); opacity: 0.7; }
     .icon-link:hover .cv-text-icon { color: var(--accent); }
 
